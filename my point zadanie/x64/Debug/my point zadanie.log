@@ -1,0 +1,4 @@
+﻿  my_point.cpp
+C:\Users\Piotr\Desktop\my point zadanie\my point zadanie\my_point.cpp(14,10): warning C4477: 'scanf_s' : format string '%s' requires an argument of type 'unsigned int', but variadic argument 2 has type 'size_t'
+C:\Users\Piotr\Desktop\my point zadanie\my point zadanie\my_point.cpp(14,10): message : this argument is used as a buffer size
+  my point zadanie.vcxproj -> C:\Users\Piotr\Desktop\my point zadanie\x64\Debug\my point zadanie.exe

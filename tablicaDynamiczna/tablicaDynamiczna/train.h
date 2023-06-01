@@ -1,5 +1,9 @@
 #pragma once
-class train
+struct train
 {
+	char* trace;
 };
+
+void* trainInit();
+void trainFree(void* ptr);
 

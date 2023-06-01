@@ -3,7 +3,7 @@
 #include "train.h"
 
 void* trainInit() {
-	train* pociag = (pociag*)malloc(sizeof(pociag));
+	train* pociag = (pociag*)malloc(sizeof(train));
 	if (pociag) {
 		char trasa[128];
 		printf("Podaj trase pociagu:");

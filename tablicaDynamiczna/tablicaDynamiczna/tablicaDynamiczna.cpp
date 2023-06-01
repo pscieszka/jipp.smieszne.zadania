@@ -1,12 +1,15 @@
 
 #include <iostream>
 #include <stdlib.h>
-
+#include "array.h"
+#include "train.h"
+array* add(array* arr);
 
 int main()
 {
 	int n;
 	int i;
+	array* arr = reateArray(4);
 	printf("Podaj wielkosc tablicy:");
 	scanf_s("%d", &n);
 	while (1) {
@@ -14,7 +17,7 @@ int main()
 		if (scanf_s("%d", &i) == 1) {
 			switch (i) {
 			case 0:
-				int j;
+				
 				
 			case 1:
 
@@ -26,4 +29,22 @@ int main()
 		}
 	}
 }
+array* add(array* arr) {
+	int j;
+	printf("\n0 - CAR\n1 - TRAIN\n");
+	scanf_s("%d", &j);
+	if (j == 0) {
+
+	}
+
+	else {
+		train* tr = NULL;
+		tr = (train*)malloc(sizeof(train));
+		if (!tr) {
+			printf("Memory allocation error\n");
+		}
+		tr = trainInit();
+	}
+}
+
 

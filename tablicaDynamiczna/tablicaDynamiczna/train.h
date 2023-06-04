@@ -5,5 +5,6 @@ struct train
 };
 
 void* trainInit();
-void trainFree(void* ptr);
+void trainFree(void** ptr);
+void trainPrint(void* ptr);
 

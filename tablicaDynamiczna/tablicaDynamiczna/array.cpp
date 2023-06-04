@@ -17,13 +17,7 @@ array* push(array* arr, array* obj) {
 	size_t size = sizeof(arr) / sizeof(arr[0]);
 	last = arr[0].last;
 
-	if (last >= size) { // jesli jest za duzo elemeentow w tablicy , trzeba ja zwiekszyc
-		arr = (array*)realloc(arr, 2 * size * sizeof(array));
-		if (!arr) {
-			return NULL;
-		}
-		memset((void*)(arr + size), 0, size * sizeof(array)); // zerujemy nowo zaalokowana pamiec
-	}
+
 	arr[last].data = obj->data;
 	arr[last].free = obj->free;
 	arr[last].print = obj->print;

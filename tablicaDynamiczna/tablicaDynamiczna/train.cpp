@@ -9,20 +9,27 @@ void* trainInit() {
 		char trasa[128];
 		printf("Podaj trase pociagu:");
 		scanf_s("%s", trasa, sizeof(trasa));
-		pociag->trace = (char*)malloc(strlen(trasa + 1));
+		pociag->trace = (char*)malloc(strlen(trasa)+1);
 		if (!pociag->trace) {
 			free(pociag);
 			return NULL;
 		}
-		strcpy_s(pociag->trace, strlen(trasa), trasa);
+		strcpy_s(pociag->trace, strlen(trasa)+1, trasa);
 	}
 	return (void*)(pociag);
 }
 
-void trainFree(void* ptr) {
+void trainFree(void** ptr) {
 	if (ptr) {
 		train* pociag = (train*)ptr;
 		free(pociag->trace);
 		free(pociag);
 	}
+}
+
+void trainPrint(void* ptr)
+{
+	train* ptr2 = (train*)ptr;
+
+	printf("Trasa pociagu: %s\n", ptr2->trace);
 }

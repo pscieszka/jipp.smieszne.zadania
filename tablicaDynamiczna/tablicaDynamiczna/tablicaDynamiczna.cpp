@@ -24,7 +24,7 @@ int main()
 				break;
 			case 2:
 				if (arr)
-				//freeArray(&arr);
+				freeArray(&arr);
 				return 0;
 			default:
 				printf("Zly wybor\n");

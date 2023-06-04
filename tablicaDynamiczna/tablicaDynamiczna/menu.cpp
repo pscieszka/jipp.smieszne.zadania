@@ -22,7 +22,7 @@ array* add(array* arr) {
 		temp.print = carPrint;
 		temp.free = carFree;
 		arr = push(arr, &temp);
-		free(cr);
+		
 	}
 	else {
 		train* tr = NULL;
@@ -35,7 +35,7 @@ array* add(array* arr) {
 		temp.print = trainPrint;
 		temp.free = trainFree;
 		arr = push(arr, &temp);
-		free(tr);
+		
 	}
 	return arr;
 }

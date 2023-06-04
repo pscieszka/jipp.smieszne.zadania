@@ -6,7 +6,7 @@ struct array
 	void* data;
 	ptr_free free;
 	ptr_print print;
-	static int last;
+	static size_t last;
 };
 
 array* createArray(size_t dim);

@@ -1,3 +1,4 @@
+#include <iostream>
 #include <stdlib.h>
 #include "array.h"
 
@@ -24,8 +25,8 @@ array* push(array* arr, array* obj) {
 		memset((void*)(arr + size), 0, size * sizeof(array)); // zerujemy nowo zaalokowana pamiec
 	}
 	arr[last].data = obj->data;
-	arr[last].ptr_free = obj->ptr_free;
-	arr[last].ptr_print = obj->ptr_print;
+	arr[last].free = obj->free;
+	arr[last].print = obj->print;
 	arr[0].last = ++last;
 
 	return arr;
@@ -34,6 +35,6 @@ void printArray(array* arr) {
 	size_t it, size = arr[0].last;
 
 	for (it = 0; it < size; it++) {
-		(*arr[it].ptr_print)(arr[it].data);
+		(*arr[it].print)(arr[it].data);
 	}
 }

@@ -1,3 +1,4 @@
+#include <iostream>
 #include <stdlib.h>
 #include "car.h"
 
@@ -25,8 +26,8 @@ void* carInit() {
 
 void carFree(void* ptr) {
     if(ptr){
-        (car*)ptr;
-        free(ptr->model);
-        free(ptr);
+        car* samochod = (car*)ptr;
+        free(samochod->model);
+        free(samochod);
     }
 }

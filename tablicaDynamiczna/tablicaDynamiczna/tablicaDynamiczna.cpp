@@ -9,7 +9,7 @@ int main()
 {
 	int n;
 	int i;
-	array* arr = reateArray(4);
+	array* arr = createArray(4);
 	printf("Podaj wielkosc tablicy:");
 	scanf_s("%d", &n);
 	while (1) {
@@ -43,7 +43,7 @@ array* add(array* arr) {
 		if (!tr) {
 			printf("Memory allocation error\n");
 		}
-		tr = trainInit();
+		tr = (train*)trainInit();
 	}
 }
 

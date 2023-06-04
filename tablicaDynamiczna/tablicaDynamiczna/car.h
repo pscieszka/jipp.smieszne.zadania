@@ -7,7 +7,8 @@ struct car
 };
 
 void* carInit();
-void carFree(void* ptr);
+void carFree(void** ptr);
+void carPrint(void* ptr);
 
 
 

@@ -12,3 +12,4 @@ struct array
 array* createArray(size_t dim);
 array* push(array* arr, array* obj);
 void printArray(array* arr);
+void freeArray(array** arr);

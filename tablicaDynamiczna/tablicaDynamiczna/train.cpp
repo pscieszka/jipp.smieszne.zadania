@@ -7,7 +7,7 @@ void* trainInit() {
 	train* pociag = (train*)malloc(sizeof(train));
 	if (pociag) {
 		char trasa[128];
-		printf("Podaj trase pociagu:");
+		printf("Podaj trase pociagu(format: miasto1->miasto2):");
 		scanf_s("%s", trasa, sizeof(trasa));
 		pociag->trace = (char*)malloc(strlen(trasa)+1);
 		if (!pociag->trace) {
@@ -20,10 +20,14 @@ void* trainInit() {
 }
 
 void trainFree(void** ptr) {
-	if (ptr) {
-		train* pociag = (train*)ptr;
-		free(pociag->trace);
+	if (ptr && *ptr) {
+		train* pociag = (train*)(*ptr);
+		if (pociag->trace) {
+			free(pociag->trace);
+			pociag->trace = NULL;
+		}
 		free(pociag);
+		*ptr = NULL;
 	}
 }
 

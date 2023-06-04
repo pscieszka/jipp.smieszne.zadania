@@ -12,9 +12,18 @@ array* add(array* arr) {
 	printf("\n0 - CAR\n1 - TRAIN\n");
 	scanf_s("%d", &j);
 	if (j == 0) {
-
+		car* cr = NULL;
+		cr = (car*)malloc(sizeof(car));
+		if (!cr) {
+			printf("Memory allocation error\n");
+		}
+		cr = (car*)carInit();
+		temp.data = (void*)cr;
+		temp.print = carPrint;
+		temp.free = carFree;
+		arr = push(arr, &temp);
+		free(cr);
 	}
-
 	else {
 		train* tr = NULL;
 		tr = (train*)malloc(sizeof(train));
@@ -26,6 +35,7 @@ array* add(array* arr) {
 		temp.print = trainPrint;
 		temp.free = trainFree;
 		arr = push(arr, &temp);
+		free(tr);
 	}
 	return arr;
 }

@@ -32,3 +32,26 @@ void printArray(array* arr) {
 		(*arr[it].print)(arr[it].data);
 	}
 }
+void freeArray(array** arr)
+{
+	if (arr)
+	{
+		if (*arr)
+		{
+			size_t it, no_items = (*arr)[0].last;
+			for (it = 0; it < no_items; ++it)
+			{
+				if ((*arr)[it].data != NULL)  // SprawdŸ, czy wskaŸnik nie jest ju¿ NULL
+				{
+					(*(*arr)[it].free)(&(*arr)[it].data);
+					(*arr)[it].data = NULL;  // Ustaw wskaŸnik na NULL tylko jeœli nie jest ju¿ NULL
+				}
+			}
+
+			free(*arr);
+			*arr = NULL;
+		}
+
+		array::last = 0;
+	}
+}

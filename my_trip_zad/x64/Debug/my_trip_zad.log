@@ -1,0 +1,7 @@
+﻿  MY_STORAGE.cpp
+C:\Users\Piotrek\source\repos\my_trip_zad\my_trip_zad\MY_STORAGE.cpp(29,11): warning C4566: character represented by universal-character-name '\u0142' cannot be represented in the current code page (1252)
+C:\Users\Piotrek\source\repos\my_trip_zad\my_trip_zad\MY_STORAGE.cpp(29,11): warning C4566: character represented by universal-character-name '\u0105' cannot be represented in the current code page (1252)
+C:\Users\Piotrek\source\repos\my_trip_zad\my_trip_zad\MY_STORAGE.cpp(29,11): warning C4566: character represented by universal-character-name '\u0119' cannot be represented in the current code page (1252)
+  my_trip_zad.cpp
+  Generating Code...
+  my_trip_zad.vcxproj -> C:\Users\Piotrek\source\repos\my_trip_zad\x64\Debug\my_trip_zad.exe
